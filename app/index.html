@@ -4,8 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <title>Notas</title>
+    <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
+    <div class="interaction">
+        <input type="text" id="include">
+        <input type="button" id="includeBtn" value="&#10140;">
+    </div>
+    <hr>
+    <div class="content">
+        <ul id="notes"></ul>
+    </div>
 
+    <script src="./public/js/renderer.js"></script>
 </body>
 </html>
