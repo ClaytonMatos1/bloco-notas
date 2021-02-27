@@ -1,0 +1,24 @@
+{
+  "name": "editor",
+  "version": "1.0.0",
+  "description": "Notas",
+  "main": "main.js",
+  "scripts": {
+    "preinstall": "yarn install",
+    "start": "electron ."
+  },
+  "author": "Clayton Matos",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^11.3.0",
+    "husky": "^5.1.1"
+  },
+  "dependencies": {
+    "custom-electron-titlebar": "^3.2.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm version patch -f"
+    }
+  }
+}
