@@ -1,20 +1,38 @@
 {
-  "name": "editor",
+  "name": "notas",
   "version": "1.0.1",
   "description": "Notas",
   "main": "main.js",
   "scripts": {
     "preinstall": "npm install",
-    "start": "electron ."
+    "start": "electron-forge start",
+    "make": "electron-forge make"
   },
   "author": "Clayton Matos",
   "license": "ISC",
   "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
     "electron": "^11.3.0",
     "husky": "4.3.0"
   },
   "dependencies": {
     "custom-electron-titlebar": "^3.2.6"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "icon": "./app/public/img/icon.ico"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "notes"
+          }
+        }
+      ]
+    }
   },
   "husky": {
     "hooks": {
