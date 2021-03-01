@@ -13,7 +13,7 @@ async function createWindow () {
         webPreferences: {
             nodeIntegration: true,
             enableRemoteModule: true,
-            contextIsolation: true,
+            contextIsolation: false,
             preload: `${__dirname}/app/js/preload.js`
         }
     });
